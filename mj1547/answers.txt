@@ -1,0 +1,52 @@
+1--
+In [1]: import os
+
+In [2]: os.path.abspath?
+Type:       function
+String Form:<function abspath at 0x7f961d6bb9b0>
+File:       /usr/lib/python2.7/posixpath.py
+Definition: os.path.abspath(path)
+Docstring:  Return an absolute path.
+
+# the file os.path.abspath function defined in is /usr/lib/python2.7/posixpath.py
+
+2:
+In [3]: num = int(os.popen('ls /etc -l | wc -l').read())
+#to assign the number of file in the directory /etc in a single command
+
+
+3:
+In [4]: import math
+
+In [7]: math.sqrt(num)
+Out[7]: 15.297058540778355
+# the square root of num
+
+4:
+In [8]: x=12345
+
+In [9]: import numpy
+
+In [10]: %timeit x**2
+10000000 loops, best of 3: 58.7 ns per loop
+
+In [11]: %timeit x*x
+10000000 loops, best of 3: 43 ns per loop
+
+In [12]: %timeit numpy.square(x)
+1000000 loops, best of 3: 1.16 µs per loop
+
+# the fastest one is x*x
+
+5:
+In [14]: %lsmagic
+Out[14]: 
+Available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %colors  %config  %connect_info  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %guiref  %hist  %history  %install_default_config  %install_ext  %install_profiles  %killbgscripts  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %lsmagic  %macro  %magic  %man  %matplotlib  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %run  %save  %sc  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.
+
+ #there will be 24 available cell magics
